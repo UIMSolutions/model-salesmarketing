@@ -1,4 +1,4 @@
-module models.salesmarketing.entities.agreementexternalagreementclassificationcod;
+module models.salesmarketing.entities.custchargecust;
 
 @safe:
 import models.salesmarketing;
@@ -11,12 +11,11 @@ class DCustomerPriorityClassificationGroupEntity : DOOPEntity {
 
     this
       .addValues([ // individual values
-        "CustomerPriorityClassificationGroupCode": StringAttribute,
-        "Description": StringAttribute,
-        "BackingTable_CustClassificationGroupRelationshipId": StringAttribute,
-        "Relationship_PrimaryCompanyContextRelationshipId": StringAttribute,
+        "customerPriorityClassificationGroupCode": StringAttribute,
+        "backingTable_CustClassificationGroupRelationshipId": UUIDAttribute,
+        "relationship_PrimaryCompanyContextRelationshipId": UUIDAttribute,
       ])
-      .registerPath("addressbooks_logistics.locationroles");
+      .registerPath("salesmarketing_logistics.locationroles");
   }
 }
 mixin(EntityCalls!("CustomerPriorityClassificationGroupEntity"));

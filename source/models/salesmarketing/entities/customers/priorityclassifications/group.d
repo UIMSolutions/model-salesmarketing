@@ -16,7 +16,7 @@ class DCustomerPriorityClassificationGroupEntity : DOOPEntity {
         "BackingTable_CustClassificationGroupRelationshipId": StringAttribute,
         "Relationship_PrimaryCompanyContextRelationshipId": StringAttribute,
       ])
-      .registerPath("addressbooks_logistics.locationroles");
+      .registerPath("salesmarketing_logistics.locationroles");
   }
 }
 mixin(EntityCalls!("CustomerPriorityClassificationGroupEntity"));

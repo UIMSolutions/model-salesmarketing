@@ -17,7 +17,7 @@ language		GAB/LogisticsLocationRoleEntity
 type		GAB/LogisticsLocationRoleEntity
 backingTable_LogisticsLocationRoleTranslationRelationshipId		GAB/LogisticsLocationRoleEntity
       ])
-      .registerPath("addressbooks_logistics.locationroles");
+      .registerPath("salesmarketing_logistics.locationroles");
   }
 }
 mixin(EntityCalls!("LogisticsLocationRoleEntity"));

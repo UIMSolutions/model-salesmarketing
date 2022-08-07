@@ -11,11 +11,10 @@ class DHMIMClassEntity : DOOPEntity {
 
     this
       .addValues([ // individual values
-        "ClassCode": StringAttribute,
-        "Description": StringAttribute,
-        "BackingTable_HMIMClassRelationshipId": StringAttribute,      
+        "classCode": StringAttribute,
+        "backingTable_HMIMClassRelationshipId": UUIDAttribute,      
       ])
-      .registerPath("addressbooks_logistics.locationroles");
+      .registerPath("salesmarketing_logistics.locationroles");
   }
 }
 mixin(EntityCalls!("HMIMClassEntity"));
