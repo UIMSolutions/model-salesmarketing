@@ -14,7 +14,7 @@ class DHMIMClassEntity : DOOPEntity {
         "classCode": StringAttribute,
         "backingTable_HMIMClassRelationshipId": UUIDAttribute,      
       ])
-      .registerPath("salesmarketing_logistics.locationroles");
+      .registerPath("salesmarketing_hmim.classes");
   }
 }
 mixin(EntityCalls!("HMIMClassEntity"));
