@@ -3,30 +3,28 @@ module models.salesmarketing.entities.agreementexternalagreementclassificationco
 @safe:
 import models.salesmarketing;
 
-class DLogisticsLocationRoleEntity : DOOPEntity {
-  mixin(EntityThis!("LogisticsLocationRoleEntity"));
+class DCustomerPriorityClassificationGroupEntity : DOOPEntity {
+  mixin(EntityThis!("CustomerPriorityClassificationGroupEntity"));
   
   override void initialize() {
     super.initialize;
 
     this
       .addValues([ // individual values
-purpose		GAB/LogisticsLocationRoleEntity
-postalAddress		GAB/LogisticsLocationRoleEntity
-contactInfo		GAB/LogisticsLocationRoleEntity
-language		GAB/LogisticsLocationRoleEntity
-type		GAB/LogisticsLocationRoleEntity
-backingTable_LogisticsLocationRoleTranslationRelationshipId		GAB/LogisticsLocationRoleEntity
+        "CustomerPriorityClassificationGroupCode": StringAttribute,
+        "Description": StringAttribute,
+        "BackingTable_CustClassificationGroupRelationshipId": StringAttribute,
+        "Relationship_PrimaryCompanyContextRelationshipId": StringAttribute,
       ])
       .registerPath("addressbooks_logistics.locationroles");
   }
 }
-mixin(EntityCalls!("LogisticsLocationRoleEntity"));
+mixin(EntityCalls!("CustomerPriorityClassificationGroupEntity"));
 
 version(test_library) {
   unittest {
-    assert(LogisticsLocationRoleEntity);
+    assert(CustomerPriorityClassificationGroupEntity);
   
-    auto entity = LogisticsLocationRoleEntity;
+    auto entity = CustomerPriorityClassificationGroupEntity;
   }
 }
