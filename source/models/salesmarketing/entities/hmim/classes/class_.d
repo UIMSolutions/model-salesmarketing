@@ -3,30 +3,27 @@ module models.salesmarketing.entities.hmim.class_;
 @safe:
 import models.salesmarketing;
 
-class DLogisticsLocationRoleEntity : DOOPEntity {
-  mixin(EntityThis!("LogisticsLocationRoleEntity"));
+class DHMIMClassEntity : DOOPEntity {
+  mixin(EntityThis!("HMIMClassEntity"));
   
   override void initialize() {
     super.initialize;
 
     this
       .addValues([ // individual values
-purpose		GAB/LogisticsLocationRoleEntity
-postalAddress		GAB/LogisticsLocationRoleEntity
-contactInfo		GAB/LogisticsLocationRoleEntity
-language		GAB/LogisticsLocationRoleEntity
-type		GAB/LogisticsLocationRoleEntity
-backingTable_LogisticsLocationRoleTranslationRelationshipId		GAB/LogisticsLocationRoleEntity
+        "ClassCode": StringAttribute,
+        "Description": StringAttribute,
+        "BackingTable_HMIMClassRelationshipId": StringAttribute,      
       ])
       .registerPath("addressbooks_logistics.locationroles");
   }
 }
-mixin(EntityCalls!("LogisticsLocationRoleEntity"));
+mixin(EntityCalls!("HMIMClassEntity"));
 
 version(test_library) {
   unittest {
-    assert(LogisticsLocationRoleEntity);
+    assert(HMIMClassEntity);
   
-    auto entity = LogisticsLocationRoleEntity;
+    auto entity = HMIMClassEntity;
   }
 }
