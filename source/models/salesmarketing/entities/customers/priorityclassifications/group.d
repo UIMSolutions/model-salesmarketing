@@ -21,7 +21,7 @@ class DCustomerPriorityClassificationGroupEntity : DOOPEntity {
 }
 mixin(EntityCalls!("CustomerPriorityClassificationGroupEntity"));
 
-version(test_library) {
+version(test_modul_salesmarketing) {
   unittest {
     assert(CustomerPriorityClassificationGroupEntity);
   

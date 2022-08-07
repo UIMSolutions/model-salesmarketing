@@ -19,7 +19,7 @@ class DHMIMClassEntity : DOOPEntity {
 }
 mixin(EntityCalls!("HMIMClassEntity"));
 
-version(test_library) {
+version(test_modul_salesmarketing) {
   unittest {
     assert(HMIMClassEntity);
   
