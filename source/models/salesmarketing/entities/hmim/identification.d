@@ -3,30 +3,29 @@ module models.salesmarketing.entities.hmim.identification;
 @safe:
 import models.salesmarketing;
 
-class DLogisticsLocationRoleEntity : DOOPEntity {
-  mixin(EntityThis!("LogisticsLocationRoleEntity"));
+class DHMIMIdentificationEntity : DOOPEntity {
+  mixin(EntityThis!("HMIMIdentificationEntity"));
   
   override void initialize() {
     super.initialize;
 
     this
       .addValues([ // individual values
-purpose		GAB/LogisticsLocationRoleEntity
-postalAddress		GAB/LogisticsLocationRoleEntity
-contactInfo		GAB/LogisticsLocationRoleEntity
-language		GAB/LogisticsLocationRoleEntity
-type		GAB/LogisticsLocationRoleEntity
-backingTable_LogisticsLocationRoleTranslationRelationshipId		GAB/LogisticsLocationRoleEntity
+        "IdentificationCode": StringAttribute, 
+        "Description": StringAttribute, 
+        "RestrictAir": StringAttribute, 
+        "RestrictSea": StringAttribute, 
+        "BackingTable_HMIMIdentificationRelationshipId": StringAttribute,       
       ])
       .registerPath("salesmarketing_logistics.locationroles");
   }
 }
-mixin(EntityCalls!("LogisticsLocationRoleEntity"));
+mixin(EntityCalls!("HMIMIdentificationEntity"));
 
 version(test_modul_salesmarketing) {
   unittest {
-    assert(LogisticsLocationRoleEntity);
+    assert(HMIMIdentificationEntity);
   
-    auto entity = LogisticsLocationRoleEntity;
+    auto entity = HMIMIdentificationEntity;
   }
 }
