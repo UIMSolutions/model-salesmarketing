@@ -1,33 +1,31 @@
 
-module models.salesmarketing.entities.agreementexternalagreementclassificationcod;
+module models.salesmarketing.entities.mcr.couponcatalog;
 
 @safe:
 import models.salesmarketing;
 
-class DLogisticsLocationRoleEntity : DOOPEntity {
-  mixin(EntityThis!("LogisticsLocationRoleEntity"));
+class DMCRCouponCatalogEntity : DOOPEntity {
+  mixin(EntityThis!("MCRCouponCatalogEntity"));
   
   override void initialize() {
     super.initialize;
 
     this
       .addValues([ // individual values
-purpose		GAB/LogisticsLocationRoleEntity
-postalAddress		GAB/LogisticsLocationRoleEntity
-contactInfo		GAB/LogisticsLocationRoleEntity
-language		GAB/LogisticsLocationRoleEntity
-type		GAB/LogisticsLocationRoleEntity
-backingTable_LogisticsLocationRoleTranslationRelationshipId		GAB/LogisticsLocationRoleEntity
+        "catalogCode": StringAttribute,
+        "couponId": StringAttribute,
+        "catalogNumber": StringAttribute,
+        "relationship_PrimaryCompanyContextRelationshipId": StringAttribute,
       ])
-      .registerPath("salesmarketing_logistics.locationroles");
+      .registerPath("salesmarketing_logistics.mcr.couponcatalogs");
   }
 }
-mixin(EntityCalls!("LogisticsLocationRoleEntity"));
+mixin(EntityCalls!("MCRCouponCatalogEntity"));
 
 version(test_modul_salesmarketing) {
   unittest {
-    assert(LogisticsLocationRoleEntity);
+    assert(MCRCouponCatalogEntity);
   
-    auto entity = LogisticsLocationRoleEntity;
+    auto entity = MCRCouponCatalogEntity;
   }
 }
