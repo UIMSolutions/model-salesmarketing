@@ -13,8 +13,8 @@ class DCustomerPriorityClassificationGroupEntity : DOOPEntity {
       .addValues([ // individual values
         "CustomerPriorityClassificationGroupCode": StringAttribute,
         "Description": StringAttribute,
-        "BackingTable_CustClassificationGroupRelationshipId": StringAttribute,
-        "Relationship_PrimaryCompanyContextRelationshipId": StringAttribute,
+        "BackingTable_CustClassificationGroupRelationshipId": UUIDAttribute,
+        "Relationship_PrimaryCompanyContextRelationshipId": UUIDAttribute,
       ])
       .registerPath("salesmarketing_logistics.locationroles");
   }

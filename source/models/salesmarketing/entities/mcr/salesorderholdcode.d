@@ -13,7 +13,7 @@ class DMCRSalesOrderHoldCodeEntity : DOOPEntity {
     this
       .addValues([ // individual values
         "salesOrderHoldCode": StringAttribute,
-        "associatedSecurityRoleId": StringAttribute,
+        "associatedSecurityRoleId": UUIDAttribute,
         "associatedSecurityRoleName": StringAttribute,
         "isDefaultSalesOrderHoldCode": BooleanAttribute,
         "isHoldCodeRemovingInventoryReservations": BooleanAttribute,

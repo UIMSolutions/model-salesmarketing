@@ -15,7 +15,7 @@ class DHMIMIdentificationEntity : DOOPEntity {
         "Description": StringAttribute, 
         "RestrictAir": StringAttribute, 
         "RestrictSea": StringAttribute, 
-        "BackingTable_HMIMIdentificationRelationshipId": StringAttribute,       
+        "BackingTable_HMIMIdentificationRelationshipId": UUIDAttribute,       
       ])
       .registerPath("salesmarketing_logistics.locationroles");
   }
