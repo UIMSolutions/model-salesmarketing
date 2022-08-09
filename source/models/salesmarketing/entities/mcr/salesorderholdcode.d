@@ -1,33 +1,34 @@
 
-module models.salesmarketing.entities.agreementexternalagreementclassificationcod;
+module models.salesmarketing.entities.mcr.salesorderholdcode;
 
 @safe:
 import models.salesmarketing;
 
-class DLogisticsLocationRoleEntity : DOOPEntity {
-  mixin(EntityThis!("LogisticsLocationRoleEntity"));
+class DMCRSalesOrderHoldCodeEntity : DOOPEntity {
+  mixin(EntityThis!("MCRSalesOrderHoldCodeEntity"));
   
   override void initialize() {
     super.initialize;
 
     this
       .addValues([ // individual values
-purpose		GAB/LogisticsLocationRoleEntity
-postalAddress		GAB/LogisticsLocationRoleEntity
-contactInfo		GAB/LogisticsLocationRoleEntity
-language		GAB/LogisticsLocationRoleEntity
-type		GAB/LogisticsLocationRoleEntity
-backingTable_LogisticsLocationRoleTranslationRelationshipId		GAB/LogisticsLocationRoleEntity
+        "salesOrderHoldCode": StringAttribute,
+        "associatedSecurityRoleId": StringAttribute,
+        "associatedSecurityRoleName": StringAttribute,
+        "isDefaultSalesOrderHoldCode": BooleanAttribute,
+        "isHoldCodeRemovingInventoryReservations": BooleanAttribute,
+        "backingTable_MCRHoldCodeTableRelationshipId": UUIDAttribute,
+        "relationship_PrimaryCompanyContextRelationshipId": UUIDAttribute,
       ])
-      .registerPath("salesmarketing_logistics.locationroles");
+      .registerPath("salesmarketing_mcr.salesorderholdcodes");
   }
 }
-mixin(EntityCalls!("LogisticsLocationRoleEntity"));
+mixin(EntityCalls!("MCRSalesOrderHoldCodeEntity"));
 
 version(test_modul_salesmarketing) {
   unittest {
-    assert(LogisticsLocationRoleEntity);
+    assert(MCRSalesOrderHoldCodeEntity);
   
-    auto entity = LogisticsLocationRoleEntity;
+    auto entity = MCRSalesOrderHoldCodeEntity;
   }
 }
