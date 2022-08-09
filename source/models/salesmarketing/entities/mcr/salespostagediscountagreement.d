@@ -1,33 +1,56 @@
 
-module models.salesmarketing.entities.agreementexternalagreementclassificationcod;
+module models.salesmarketing.entities.mcr.salespostagediscountagreement;
 
 @safe:
 import models.salesmarketing;
 
-class DLogisticsLocationRoleEntity : DOOPEntity {
-  mixin(EntityThis!("LogisticsLocationRoleEntity"));
+class DMCRSalesPostageDiscountAgreementEntity : DOOPEntity {
+  mixin(EntityThis!("MCRSalesPostageDiscountAgreementEntity"));
   
   override void initialize() {
     super.initialize;
 
     this
       .addValues([ // individual values
-purpose		GAB/LogisticsLocationRoleEntity
-postalAddress		GAB/LogisticsLocationRoleEntity
-contactInfo		GAB/LogisticsLocationRoleEntity
-language		GAB/LogisticsLocationRoleEntity
-type		GAB/LogisticsLocationRoleEntity
-backingTable_LogisticsLocationRoleTranslationRelationshipId		GAB/LogisticsLocationRoleEntity
+        "accountCode": StringAttribute,
+        "accountRelation": StringAttribute,
+        "discountAmount": StringAttribute,
+        "discountCurrencyCode": StringAttribute,
+        "discountApplicableFromDate": StringAttribute,
+        "inventDimId": StringAttribute,
+        "itemCode": StringAttribute,
+        "itemRelation": StringAttribute,
+        "discountPercentage1": StringAttribute,
+        "discountPercentage2": StringAttribute,
+        "fromQuantity": StringAttribute,
+        "toQuantity": StringAttribute,
+        "willSearchContinue": StringAttribute,
+        "discountApplicableToDate": StringAttribute,
+        "quantityUnitSymbol": StringAttribute,
+        "recordId": StringAttribute,
+        "customerAccountNumber": StringAttribute,
+        "postageDiscountCustomerGroupCode": StringAttribute,
+        "itemNumber": StringAttribute,
+        "productConfigurationId": StringAttribute,
+        "productColorId": StringAttribute,
+        "productSizeId": StringAttribute,
+        "productStyleId": StringAttribute,
+        "productVersionId": StringAttribute,
+        "piscountSiteId": StringAttribute,
+        "piscountWarehouseId": StringAttribute,
+        "productNumber": StringAttribute,
+        "backingTable_PriceDiscTableRelationshipId": StringAttribute,
+        "relationship_PrimaryCompanyContextRelationshipId": StringAttribute,
       ])
-      .registerPath("salesmarketing_logistics.locationroles");
+      .registerPath("salesmarketing_mcr.salespostagediscountagreement");
   }
 }
-mixin(EntityCalls!("LogisticsLocationRoleEntity"));
+mixin(EntityCalls!("MCRSalesPostageDiscountAgreementEntity"));
 
 version(test_modul_salesmarketing) {
   unittest {
-    assert(LogisticsLocationRoleEntity);
+    assert(MCRSalesPostageDiscountAgreementEntity);
   
-    auto entity = LogisticsLocationRoleEntity;
+    auto entity = MCRSalesPostageDiscountAgreementEntity;
   }
 }
