@@ -14,8 +14,8 @@ class DMCRPostageDiscountCustomerGroupEntity : DOOPEntity {
       .addValues([ // individual values
         "groupCode": StringAttribute,
         "groupName": StringAttribute,
-        "backingTable_PriceDiscGroupRelationshipId": StringAttribute,
-        "relationship_PrimaryCompanyContextRelationshipId": StringAttribute,
+        "backingTable_PriceDiscGroupRelationshipId": UUIDAttribute,
+        "relationship_PrimaryCompanyContextRelationshipId": UUIDAttribute,
       ])
       .registerPath("salesmarketing_mcr.postagediscountcustomergroups");
   }

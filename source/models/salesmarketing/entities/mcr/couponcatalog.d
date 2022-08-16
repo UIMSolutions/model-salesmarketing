@@ -13,9 +13,9 @@ class DMCRCouponCatalogEntity : DOOPEntity {
     this
       .addValues([ // individual values
         "catalogCode": StringAttribute,
-        "couponId": StringAttribute,
+        "couponId": UUIDAttribute,
         "catalogNumber": StringAttribute,
-        "relationship_PrimaryCompanyContextRelationshipId": StringAttribute,
+        "relationship_PrimaryCompanyContextRelationshipId": UUIDAttribute,
       ])
       .registerPath("salesmarketing_logistics.mcr.couponcatalogs");
   }

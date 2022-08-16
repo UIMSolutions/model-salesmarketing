@@ -12,17 +12,17 @@ class DMCRSalesProductSetDetailEntity : DOOPEntity {
     this
       .addValues([ // individual values
         "itemNumber": StringAttribute,
-        "productConfigurationId": StringAttribute,
-        "productSizeId": StringAttribute,
-        "productColorId": StringAttribute,
-        "productStyleId": StringAttribute,
-        "productVersionId": StringAttribute,
+        "productConfigurationId": UUIDAttribute,
+        "productSizeId": UUIDAttribute,
+        "productColorId": UUIDAttribute,
+        "productStyleId": UUIDAttribute,
+        "productVersionId": UUIDAttribute,
         "orderedSalesQuantity": StringAttribute,
         "salesUnitSymbol": StringAttribute,
         "salesProductSetNumber": StringAttribute,
         "customerAccountNumber": StringAttribute,
-        "backingTable_MCRItemListLineRelationshipId": StringAttribute,
-        "relationship_PrimaryCompanyContextRelationshipId": StringAttribute,
+        "backingTable_MCRItemListLineRelationshipId": UUIDAttribute,
+        "relationship_PrimaryCompanyContextRelationshipId": UUIDAttribute,
       ])
       .registerPath("salesmarketing_mcr.salesproductsetdetails");
   }

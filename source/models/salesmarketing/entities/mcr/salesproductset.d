@@ -14,8 +14,8 @@ class DMCRSalesProductSetEntity : DOOPEntity {
         "productSetNumber": StringAttribute,
         "productSetDescription": StringAttribute,
         "customerAccountNumber": StringAttribute,
-        "backingTable_MCRItemListTableRelationshipId": StringAttribute,
-        "relationship_PrimaryCompanyContextRelationshipId": StringAttribute,
+        "backingTable_MCRItemListTableRelationshipId": UUIDAttribute,
+        "relationship_PrimaryCompanyContextRelationshipId": UUIDAttribute,
       ])
       .registerPath("salesmarketing_mcr.salesproductsets");
   }
