@@ -22,8 +22,7 @@ class DHMIMIdentificationEntity : DOOPEntity {
 }
 mixin(EntityCalls!("HMIMIdentificationEntity"));
 
-version(test_modul_salesmarketing) {
-  unittest {
+version(test_modul_salesmarketing) { unittest {
     assert(HMIMIdentificationEntity);
   
     auto entity = HMIMIdentificationEntity;
