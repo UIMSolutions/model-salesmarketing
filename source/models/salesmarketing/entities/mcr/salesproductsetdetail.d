@@ -6,7 +6,7 @@ import models.salesmarketing;
 class DMCRSalesProductSetDetailEntity : DOOPEntity {
   mixin(EntityThis!("MCRSalesProductSetDetailEntity"));
   
-  override void initialize() {
+  override void initialize(DConfigurationValue configSettings = null) {
     super.initialize(configSettings);
 
     this
