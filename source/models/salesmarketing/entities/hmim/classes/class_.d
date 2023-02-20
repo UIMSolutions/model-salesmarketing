@@ -19,8 +19,7 @@ class DHMIMClassEntity : DOOPEntity {
 }
 mixin(EntityCalls!("HMIMClassEntity"));
 
-version(test_modul_salesmarketing) {
-  unittest {
+version(test_modul_salesmarketing) { unittest {
     assert(HMIMClassEntity);
   
     auto entity = HMIMClassEntity;
