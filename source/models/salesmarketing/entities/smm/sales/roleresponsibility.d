@@ -25,8 +25,7 @@ backingTable_LogisticsLocationRoleTranslationRelationshipId		GAB/LogisticsLocati
 }
 mixin(EntityCalls!("LogisticsLocationRoleEntity"));
 
-version(test_modul_salesmarketing) {
-  unittest {
+version(test_modul_salesmarketing) { unittest {
     assert(LogisticsLocationRoleEntity);
   
     auto entity = LogisticsLocationRoleEntity;
