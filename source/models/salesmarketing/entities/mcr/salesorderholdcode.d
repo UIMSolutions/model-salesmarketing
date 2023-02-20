@@ -7,7 +7,7 @@ import models.salesmarketing;
 class DMCRSalesOrderHoldCodeEntity : DOOPEntity {
   mixin(EntityThis!("MCRSalesOrderHoldCodeEntity"));
   
-  override void initialize() {
+  override void initialize(DConfigurationValue configSettings = null) {
     super.initialize(configSettings);
 
     this

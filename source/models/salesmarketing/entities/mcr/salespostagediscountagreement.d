@@ -7,7 +7,7 @@ import models.salesmarketing;
 class DMCRSalesPostageDiscountAgreementEntity : DOOPEntity {
   mixin(EntityThis!("MCRSalesPostageDiscountAgreementEntity"));
   
-  override void initialize() {
+  override void initialize(DConfigurationValue configSettings = null) {
     super.initialize(configSettings);
 
     this

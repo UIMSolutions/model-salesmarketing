@@ -7,7 +7,7 @@ import models.salesmarketing;
 class DMCRPostageDiscountCustomerGroupEntity : DOOPEntity {
   mixin(EntityThis!("MCRPostageDiscountCustomerGroupEntity"));
   
-  override void initialize() {
+  override void initialize(DConfigurationValue configSettings = null) {
     super.initialize(configSettings);
 
     this
