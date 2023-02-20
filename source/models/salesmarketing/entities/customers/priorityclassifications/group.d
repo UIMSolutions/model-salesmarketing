@@ -6,7 +6,7 @@ import models.salesmarketing;
 class DCustomerPriorityClassificationGroupEntity : DOOPEntity {
   mixin(EntityThis!("CustomerPriorityClassificationGroupEntity"));
   
-  override void initialize() {
+  override void initialize(DConfigurationValue configSettings = null) {
     super.initialize(configSettings);
 
     this
