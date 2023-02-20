@@ -8,7 +8,7 @@ class DMCRSalesPostageDiscountAgreementEntity : DOOPEntity {
   mixin(EntityThis!("MCRSalesPostageDiscountAgreementEntity"));
   
   override void initialize() {
-    super.initialize;
+    super.initialize(configSettings);
 
     this
       .addValues([ // individual values

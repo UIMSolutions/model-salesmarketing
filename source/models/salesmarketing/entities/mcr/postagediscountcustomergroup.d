@@ -8,7 +8,7 @@ class DMCRPostageDiscountCustomerGroupEntity : DOOPEntity {
   mixin(EntityThis!("MCRPostageDiscountCustomerGroupEntity"));
   
   override void initialize() {
-    super.initialize;
+    super.initialize(configSettings);
 
     this
       .addValues([ // individual values

@@ -8,7 +8,7 @@ class DMCRSalesOrderHoldCodeEntity : DOOPEntity {
   mixin(EntityThis!("MCRSalesOrderHoldCodeEntity"));
   
   override void initialize() {
-    super.initialize;
+    super.initialize(configSettings);
 
     this
       .addValues([ // individual values
