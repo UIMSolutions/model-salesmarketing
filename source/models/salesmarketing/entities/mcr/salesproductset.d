@@ -22,8 +22,7 @@ class DMCRSalesProductSetEntity : DOOPEntity {
 }
 mixin(EntityCalls!("MCRSalesProductSetEntity"));
 
-version(test_modul_salesmarketing) {
-  unittest {
+version(test_modul_salesmarketing) { unittest {
     assert(MCRSalesProductSetEntity);
   
     auto entity = MCRSalesProductSetEntity;
