@@ -7,7 +7,7 @@ class DMCRSalesProductSetEntity : DOOPEntity {
   mixin(EntityThis!("MCRSalesProductSetEntity"));
   
   override void initialize() {
-    super.initialize;
+    super.initialize(configSettings);
 
     this
       .addValues([ // individual values
