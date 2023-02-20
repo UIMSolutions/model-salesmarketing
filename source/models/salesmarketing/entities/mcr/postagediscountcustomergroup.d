@@ -22,8 +22,7 @@ class DMCRPostageDiscountCustomerGroupEntity : DOOPEntity {
 }
 mixin(EntityCalls!("MCRPostageDiscountCustomerGroupEntity"));
 
-version(test_modul_salesmarketing) {
-  unittest {
+version(test_modul_salesmarketing) { unittest {
     assert(MCRPostageDiscountCustomerGroupEntity);
   
     auto entity = MCRPostageDiscountCustomerGroupEntity;

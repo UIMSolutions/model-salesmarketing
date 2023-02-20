@@ -25,8 +25,7 @@ class DMCRSalesOrderHoldCodeEntity : DOOPEntity {
 }
 mixin(EntityCalls!("MCRSalesOrderHoldCodeEntity"));
 
-version(test_modul_salesmarketing) {
-  unittest {
+version(test_modul_salesmarketing) { unittest {
     assert(MCRSalesOrderHoldCodeEntity);
   
     auto entity = MCRSalesOrderHoldCodeEntity;

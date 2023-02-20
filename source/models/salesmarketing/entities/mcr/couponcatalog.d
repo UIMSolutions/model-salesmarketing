@@ -22,8 +22,7 @@ class DMCRCouponCatalogEntity : DOOPEntity {
 }
 mixin(EntityCalls!("MCRCouponCatalogEntity"));
 
-version(test_modul_salesmarketing) {
-  unittest {
+version(test_modul_salesmarketing) { unittest {
     assert(MCRCouponCatalogEntity);
   
     auto entity = MCRCouponCatalogEntity;

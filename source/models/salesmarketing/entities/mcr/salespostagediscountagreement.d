@@ -47,8 +47,7 @@ class DMCRSalesPostageDiscountAgreementEntity : DOOPEntity {
 }
 mixin(EntityCalls!("MCRSalesPostageDiscountAgreementEntity"));
 
-version(test_modul_salesmarketing) {
-  unittest {
+version(test_modul_salesmarketing) { unittest {
     assert(MCRSalesPostageDiscountAgreementEntity);
   
     auto entity = MCRSalesPostageDiscountAgreementEntity;
