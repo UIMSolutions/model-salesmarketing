@@ -1,7 +1,5 @@
 module models.salesmarketing.entities.mcr.brokers.brokercontractheader;
 
-module models.salesmarketing.entities.agreementexternalagreementclassificationcod;
-
 @safe:
 import models.salesmarketing;
 
