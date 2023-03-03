@@ -12,12 +12,12 @@ class DLogisticsLocationRoleEntity : DOOPEntity {
 
     this
       .addValues([ // individual values
-purpose		GAB/LogisticsLocationRoleEntity
-postalAddress		GAB/LogisticsLocationRoleEntity
-contactInfo		GAB/LogisticsLocationRoleEntity
-language		GAB/LogisticsLocationRoleEntity
-type		GAB/LogisticsLocationRoleEntity
-backingTable_LogisticsLocationRoleTranslationRelationshipId		GAB/LogisticsLocationRoleEntity
+        "purpose": StringAttribute, //
+        "postalAddress": StringAttribute, //
+        "contactInfo": StringAttribute, //
+        "language": StringAttribute, //
+        "type": StringAttribute, //
+        "backingTable_LogisticsLocationRoleTranslationRelationshipId": StringAttribute, //
       ])
       .registerPath("salesmarketing_logistics.locationroles");
   }
