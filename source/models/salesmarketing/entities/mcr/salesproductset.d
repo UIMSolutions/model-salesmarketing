@@ -1,9 +1,9 @@
 module models.salesmarketing.entities.mcr.salesproductset;
 
-@safe:
 import models.salesmarketing;
 
-class DMCRSalesProductSetEntity : DEntity {
+@safe:
+class  DMCRSalesProductSetEntity : DEntity {
   mixin(EntityThis!("MCRSalesProductSetEntity"));
   
   override void initialize(DConfigurationValue configSettings = null) {

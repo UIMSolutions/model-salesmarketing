@@ -1,10 +1,10 @@
 
 module models.salesmarketing.entities.mcr.salesorderholdcode;
 
-@safe:
 import models.salesmarketing;
 
-class DMCRSalesOrderHoldCodeEntity : DEntity {
+@safe:
+class  DMCRSalesOrderHoldCodeEntity : DEntity {
   mixin(EntityThis!("MCRSalesOrderHoldCodeEntity"));
   
   override void initialize(DConfigurationValue configSettings = null) {
