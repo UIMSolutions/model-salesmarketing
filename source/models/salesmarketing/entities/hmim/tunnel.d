@@ -1,30 +1,28 @@
 module models.salesmarketing.entities.hmim.tunnel;
+
 import models.salesmarketing;
 
 @safe:
-class  DLogisticsLocationRoleEntity : DEntity {
-  mixin(EntityThis!("LogisticsLocationRoleEntity"));
+class  DHMIMTunnelEntity : DEntity {
+  mixin(EntityThis!("HMIMTunnelEntity"));
   
   override void initialize(DConfigurationValue configSettings = null) {
     super.initialize(configSettings);
 
     this
       .addValues([ // individual values
-        "purpose": StringAttribute, //
-        "postalAddress": StringAttribute, //
-        "contactInfo": StringAttribute, //
-        "language": StringAttribute, //
-        "type": StringAttribute, //
-        "backingTable_LogisticsLocationRoleTranslationRelationshipId": StringAttribute, //
+        "tunnelCode": StringAttribute, //		SalesAndMarketing/HMIMTechnicalNameEntity
+        "description": StringAttribute, //		SalesAndMarketing/HMIMTechnicalNameEntity
+        "backingTable_HMIMTunelRelationshipId": StringAttribute, //		SalesAndMarketing/HMIMTechnicalNameEntity
       ])
-      .registerPath("salesmarketing_logistics.locationroles");
+      .registerPath("salesmarketing.hmim.tunnel");
   }
 }
-mixin(EntityCalls!("LogisticsLocationRoleEntity"));
+mixin(EntityCalls!("HMIMTunnelEntity"));
 
 version(test_modul_salesmarketing) { unittest {
-    assert(LogisticsLocationRoleEntity);
+    assert(HMIMTunnelEntity);
   
-    auto entity = LogisticsLocationRoleEntity;
+    auto entity = HMIMTunnelEntity;
   }
 }

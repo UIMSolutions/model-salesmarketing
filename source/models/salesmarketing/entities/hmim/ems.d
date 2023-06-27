@@ -11,9 +11,9 @@ class  DHMIMEMSEntity : DEntity {
 
     this
       .addValues([ // individual values
-        "EMSCode": StringAttribute, // SalesAndMarketing/HMIMEMSEntity
-        "Description": StringAttribute, // SalesAndMarketing/HMIMEMSEntity
-        "BackingTable_HMIMEMSRelationshipId": StringAttribute, // SalesAndMarketing/HMIMEMSEntity
+        "emsSCode": StringAttribute, // SalesAndMarketing/HMIMEMSEntity
+        "description": StringAttribute, // SalesAndMarketing/HMIMEMSEntity
+        "backingTable_HMIMEMSRelationshipId": StringAttribute, // SalesAndMarketing/HMIMEMSEntity
       ])
       .registerPath("salesmarketing.hmim.ems");
   }

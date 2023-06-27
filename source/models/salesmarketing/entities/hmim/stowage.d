@@ -11,14 +11,11 @@ class DHMIMStowageEntity : DEntity {
 
     this
       .addValues([ // individual values
-        "purpose": StringAttribute, //
-        "postalAddress": StringAttribute, //
-        "contactInfo": StringAttribute, //
-        "language": StringAttribute, //
-        "type": StringAttribute, //
-        "backingTable_LogisticsLocationRoleTranslationRelationshipId": StringAttribute, //
+        "stowageCode": StringAttribute, //		SalesAndMarketing/HMIMStowageEntity
+        "description": StringAttribute, //		SalesAndMarketing/HMIMStowageEntity
+        "backingTable_HMIMStowageRelationshipId": StringAttribute, //		SalesAndMarketing/HMIMStowageEntity
       ])
-      .registerPath("salesmarketing_logistics.locationroles");
+      .registerPath("salesmarketing.hmim.stowage");
   }
 }
 mixin(EntityCalls!("HMIMStowageEntity"));

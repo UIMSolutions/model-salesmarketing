@@ -3,29 +3,26 @@ module models.salesmarketing.entities.hmim.transportcategory;
 import models.salesmarketing;
 
 @safe:
-class  DLogisticsLocationRoleEntity : DEntity {
-  mixin(EntityThis!("LogisticsLocationRoleEntity"));
+class  DHMIMTransportCategoryEntity : DEntity {
+  mixin(EntityThis!("HMIMTransportCategoryEntity"));
   
   override void initialize(DConfigurationValue configSettings = null) {
     super.initialize(configSettings);
 
     this
       .addValues([ // individual values
-        "purpose": StringAttribute, //
-        "postalAddress": StringAttribute, //
-        "contactInfo": StringAttribute, //
-        "language": StringAttribute, //
-        "type": StringAttribute, //
-        "backingTable_LogisticsLocationRoleTranslationRelationshipId": StringAttribute, //
-      ])
+        "technicalCategoryCode": StringAttribute, //		SalesAndMarketing/HMIMTechnicalNameEntity
+        "description": StringAttribute, //		SalesAndMarketing/HMIMTechnicalNameEntity
+        "backingTable_HMIMTechnicalNameRelationshipId": StringAttribute, //		SalesAndMarketing/HMIMTechnicalNameEntity
+     ])
       .registerPath("salesmarketing_logistics.locationroles");
   }
 }
-mixin(EntityCalls!("LogisticsLocationRoleEntity"));
+mixin(EntityCalls!("HMIMTransportCategoryEntity"));
 
 version(test_modul_salesmarketing) { unittest {
-    assert(LogisticsLocationRoleEntity);
+    assert(HMIMTransportCategoryEntity);
   
-    auto entity = LogisticsLocationRoleEntity;
+    auto entity = HMIMTransportCategoryEntity;
   }
 }
