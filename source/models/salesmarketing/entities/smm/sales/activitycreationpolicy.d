@@ -2,10 +2,10 @@ module models.salesmarketing.entities.smm.sales.activitycreationpolicy;
 
 module models.salesmarketing.entities.agreementexternalagreementclassificationcod;
 
-@safe:
 import models.salesmarketing;
 
-class DLogisticsLocationRoleEntity : DEntity {
+@safe:
+class  DLogisticsLocationRoleEntity : DEntity {
   mixin(EntityThis!("LogisticsLocationRoleEntity"));
   
   override void initialize(DConfigurationValue configSettings = null) {
