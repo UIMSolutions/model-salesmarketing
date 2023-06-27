@@ -2,10 +2,10 @@ module models.salesmarketing.entities.tax.salesordertranstaxinformation;
 
 module models.salesmarketing.entities.agreementexternalagreementclassificationcod;
 
-@safe:
 import models.salesmarketing;
 
-class DLogisticsLocationRoleEntity : DEntity {
+@safe:
+class  DLogisticsLocationRoleEntity : DEntity {
   mixin(EntityThis!("LogisticsLocationRoleEntity"));
   
   override void initialize(DConfigurationValue configSettings = null) {
