@@ -1,4 +1,5 @@
-module models.salesmarketing.entities.agreementexternalagreementclassificationcod;
+
+module source.models.salesmarketing.entities.mcr.coupon.item;
 
 @safe:
 import models.salesmarketing;
