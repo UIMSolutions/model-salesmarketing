@@ -1,9 +1,9 @@
 module source.models.salesmarketing.entities.pricediscs.linediscountcustomergroup;
 
-@safe:
 import models.salesmarketing;
 
-class DPriceDiscLineDiscountCustomerGroupEntity : DEntity {
+@safe:
+class  DPriceDiscLineDiscountCustomerGroupEntity : DEntity {
   mixin(EntityThis!("PriceDiscLineDiscountCustomerGroupEntity"));
   
   override void initialize(DConfigurationValue configSettings = null) {

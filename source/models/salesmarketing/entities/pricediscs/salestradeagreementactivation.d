@@ -1,9 +1,9 @@
 module source.models.salesmarketing.entities.pricediscs.salestradeagreementactivation;
 
-@safe:
 import models.salesmarketing;
 
-class DPriceDiscSalesTradeAgreementActivationEntity : DEntity {
+@safe:
+class  DPriceDiscSalesTradeAgreementActivationEntity : DEntity {
   mixin(EntityThis!("PriceDiscSalesTradeAgreementActivationEntity"));
   
   override void initialize(DConfigurationValue configSettings = null) {
