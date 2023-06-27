@@ -4,7 +4,7 @@ module source.models.salesmarketing.entities.mcr.coupon.item;
 @safe:
 import models.salesmarketing;
 
-class DLogisticsLocationRoleEntity : DOOPEntity {
+class DLogisticsLocationRoleEntity : DEntity {
   mixin(EntityThis!("LogisticsLocationRoleEntity"));
   
   override void initialize(DConfigurationValue configSettings = null) {

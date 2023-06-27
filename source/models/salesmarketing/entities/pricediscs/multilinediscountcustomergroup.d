@@ -3,7 +3,7 @@ module models.salesmarketing.entities.pricediscmultilinediscountcustomergroupent
 @safe:
 import models.salesmarketing;
 
-class DPriceDiscMultilineDiscountCustomerGroupEntity : DOOPEntity {
+class DPriceDiscMultilineDiscountCustomerGroupEntity : DEntity {
   mixin(EntityThis!("PriceDiscMultilineDiscountCustomerGroupEntity"));
   
   override void initialize(DConfigurationValue configSettings = null) {
