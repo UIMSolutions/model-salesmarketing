@@ -1,1 +1,1 @@
-module models.myName.classes;
+module models.salesmarketing.classes;

@@ -1,10 +1,10 @@
-module models.myName.attributes;
+module models.salesmarketing.attributes;
 
 public {
-  import models.myName.attributes.codes;
-  import models.myName.attributes.elements;
-  import models.myName.attributes.entites;
-  import models.myName.attributes.functions;
-  import models.myName.attributes.relationships;
-  import models.myName.attributes.uuids;
+  import models.salesmarketing.attributes.codes;
+  import models.salesmarketing.attributes.elements;
+  import models.salesmarketing.attributes.entites;
+  import models.salesmarketing.attributes.functions;
+  import models.salesmarketing.attributes.relationships;
+  import models.salesmarketing.attributes.uuids;
 }

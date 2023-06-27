@@ -1,1 +1,1 @@
-module models.myName.attributes.uuids.entities;
+module models.salesmarketing.attributes.uuids.entities;

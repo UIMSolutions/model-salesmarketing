@@ -1,1 +1,1 @@
-module models.myName.attributes.relationsships;
+module models.salesmarketing.attributes.relationsships;
