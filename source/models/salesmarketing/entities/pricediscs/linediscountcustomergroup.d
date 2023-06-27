@@ -1,4 +1,4 @@
-module models.salesmarketing.entities.pricedisc.linediscountcustomergroup;
+module source.models.salesmarketing.entities.pricediscs.linediscountcustomergroup;
 
 @safe:
 import models.salesmarketing;

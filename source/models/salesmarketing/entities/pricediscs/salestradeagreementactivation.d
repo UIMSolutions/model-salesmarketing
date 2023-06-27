@@ -1,10 +1,10 @@
-module models.salesmarketing.entities.pricediscs.multilinediscountcustomergroup;
+module source.models.salesmarketing.entities.pricediscs.salestradeagreementactivation;
 
 @safe:
 import models.salesmarketing;
 
-class DPriceDiscMultilineDiscountCustomerGroupEntity : DEntity {
-  mixin(EntityThis!("PriceDiscMultilineDiscountCustomerGroupEntity"));
+class DPriceDiscSalesTradeAgreementActivationEntity : DEntity {
+  mixin(EntityThis!("PriceDiscSalesTradeAgreementActivationEntity"));
   
   override void initialize(DConfigurationValue configSettings = null) {
     super.initialize(configSettings);
@@ -18,14 +18,14 @@ class DPriceDiscMultilineDiscountCustomerGroupEntity : DEntity {
         "type": StringAttribute, //
         "backingTable_LogisticsLocationRoleTranslationRelationshipId": StringAttribute, //
       ])
-      .registerPath("salesmarketing_logistics.locationroles");
+      .registerPath("salesmarketing.pricediscs.salestradeagreementactivation");
   }
 }
-mixin(EntityCalls!("PriceDiscMultilineDiscountCustomerGroupEntity"));
+mixin(EntityCalls!("PriceDiscSalesTradeAgreementActivationEntity"));
 
 version(test_modul_salesmarketing) { unittest {
-    assert(LogisticsLocationRoleEntity);
+    assert(PriceDiscSalesTradeAgreementActivationEntity);
   
-    auto entity = LogisticsLocationRoleEntity;
+    auto entity = PriceDiscSalesTradeAgreementActivationEntity;
   }
 }
