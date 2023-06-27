@@ -1,9 +1,9 @@
 module models.salesmarketing.entities.hmim.transportcategory;
 
-@safe:
 import models.salesmarketing;
 
-class DLogisticsLocationRoleEntity : DEntity {
+@safe:
+class  DLogisticsLocationRoleEntity : DEntity {
   mixin(EntityThis!("LogisticsLocationRoleEntity"));
   
   override void initialize(DConfigurationValue configSettings = null) {

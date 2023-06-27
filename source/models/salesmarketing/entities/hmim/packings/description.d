@@ -1,9 +1,9 @@
 module models.salesmarketing.entities.hmim.packing.description;
 
-@safe:
 import models.salesmarketing;
 
-class DHMIMPackDescriptionEntity : DEntity {
+@safe:
+class  DHMIMPackDescriptionEntity : DEntity {
   mixin(EntityThis!("HMIMPackDescriptionEntity"));
   
   override void initialize(DConfigurationValue configSettings = null) {

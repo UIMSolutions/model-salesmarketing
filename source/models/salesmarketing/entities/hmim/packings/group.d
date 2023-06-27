@@ -1,9 +1,9 @@
 module models.salesmarketing.entities.hmim.packings.group;
 
-@safe:
 import models.salesmarketing;
 
-class DHMIMPackingGroupEntity : DEntity {
+@safe:
+class  DHMIMPackingGroupEntity : DEntity {
   mixin(EntityThis!("HMIMPackingGroupEntity"));
   
   override void initialize(DConfigurationValue configSettings = null) {

@@ -1,31 +1,28 @@
-module models.salesmarketing.entities.hmim.packinginstruction;
+module models.salesmarketing.entities.hmim.packings.instruction;
 
-@safe:
 import models.salesmarketing;
 
-class DLogisticsLocationRoleEntity : DEntity {
-  mixin(EntityThis!("LogisticsLocationRoleEntity"));
+@safe:
+class  DHMIMPackingInstructionEntity : DEntity {
+  mixin(EntityThis!("HMIMPackingInstructionEntity"));
   
   override void initialize(DConfigurationValue configSettings = null) {
     super.initialize(configSettings);
 
     this
       .addValues([ // individual values
-        "purpose": StringAttribute, //
-        "postalAddress": StringAttribute, //
-        "contactInfo": StringAttribute, //
-        "language": StringAttribute, //
-        "type": StringAttribute, //
-        "backingTable_LogisticsLocationRoleTranslationRelationshipId": StringAttribute, //
+        "pacbkInstCode": StringAttribute, 		// SalesAndMarketing/HMIMPackingInstructionEntity
+        "description": StringAttribute, 		// SalesAndMarketing/HMIMPackingInstructionEntity
+        "backingTable_HMIMPackingInstructionRelationshipId": StringAttribute, 		// SalesAndMarketing/HMIMPackingInstructionEntity
       ])
-      .registerPath("salesmarketing_logistics.locationroles");
+      .registerPath("salesmarketing.hmim.packings.instruction");
   }
 }
-mixin(EntityCalls!("LogisticsLocationRoleEntity"));
+mixin(EntityCalls!("HMIMPackingInstructionEntity"));
 
 version(test_modul_salesmarketing) { unittest {
-    assert(LogisticsLocationRoleEntity);
+    assert(HMIMPackingInstructionEntity);
   
-    auto entity = LogisticsLocationRoleEntity;
+    auto entity = HMIMPackingInstructionEntity;
   }
 }

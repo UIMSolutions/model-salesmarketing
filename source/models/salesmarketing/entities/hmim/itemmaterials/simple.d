@@ -1,9 +1,9 @@
 module models.salesmarketing.entities.hmim.itemmaterialssimple;
 
-@safe:
 import models.salesmarketing;
 
-class DHMIMItemMaterialSimpleEntity : DEntity {
+@safe:
+class  DHMIMItemMaterialSimpleEntity : DEntity {
   mixin(EntityThis!("HMIMItemMaterialSimpleEntity"));
   
   override void initialize(DConfigurationValue configSettings = null) {
