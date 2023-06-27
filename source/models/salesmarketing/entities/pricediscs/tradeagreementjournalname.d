@@ -1,9 +1,9 @@
 module source.models.salesmarketing.entities.pricediscs.tradeagreementjournalname;
 
-@safe:
 import models.salesmarketing;
 
-class DPriceDiscTradeAgreementJournalNameEntity : DEntity {
+@safe:
+class  DPriceDiscTradeAgreementJournalNameEntity : DEntity {
   mixin(EntityThis!("PriceDiscTradeAgreementJournalNameEntity"));
   
   override void initialize(DConfigurationValue configSettings = null) {
