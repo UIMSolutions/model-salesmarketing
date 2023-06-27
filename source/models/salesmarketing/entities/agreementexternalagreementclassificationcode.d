@@ -1,9 +1,9 @@
 module models.salesmarketing.entities.agreementexternalagreementclassificationcode;
 
-@safe:
 import models.salesmarketing;
 
-class DAgreementExternalAgreementClassificationCodeEntity : DEntity {
+@safe:
+class  DAgreementExternalAgreementClassificationCodeEntity : DEntity {
   mixin(EntityThis!("AgreementExternalAgreementClassificationCodeEntity"));
   
   override void initialize(DConfigurationValue configSettings = null) {

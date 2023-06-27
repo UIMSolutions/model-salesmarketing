@@ -1,9 +1,9 @@
 module models.salesmarketing.entities.commissionsalesrepresentative;
 
-@safe:
 import models.salesmarketing;
 
-class DCommissionSalesRepresentativeGroupEntity : DEntity {
+@safe:
+class  DCommissionSalesRepresentativeGroupEntity : DEntity {
   mixin(EntityThis!("CommissionSalesRepresentativeGroupEntity"));
   
   override void initialize(DConfigurationValue configSettings = null) {

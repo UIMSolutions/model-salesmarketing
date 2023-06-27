@@ -1,9 +1,9 @@
 module models.salesmarketing.entities.deliveryreason;
 
-@safe:
 import models.salesmarketing;
 
-class DDeliveryReasonEntity : DEntity {
+@safe:
+class  DDeliveryReasonEntity : DEntity {
   mixin(EntityThis!("DeliveryReasonEntity"));
   
   override void initialize(DConfigurationValue configSettings = null) {

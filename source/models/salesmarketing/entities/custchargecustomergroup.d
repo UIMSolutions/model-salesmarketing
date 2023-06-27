@@ -1,9 +1,9 @@
 module source.models.salesmarketing.entities.custchargecustomergroup;
 
-@safe:
 import models.salesmarketing;
 
-class DCustChargeCustomerGroupEntity : DEntity {
+@safe:
+class  DCustChargeCustomerGroupEntity : DEntity {
   mixin(EntityThis!("CustChargeCustomerGroupEntity"));
   
   override void initialize(DConfigurationValue configSettings = null) {
