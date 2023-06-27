@@ -14,7 +14,7 @@ class DHMIMClassEntity : DEntity {
         "classCode": StringAttribute,
         "backingTable_HMIMClassRelationshipId": UUIDAttribute,      
       ])
-      .registerPath("salesmarketing_hmim.classes");
+      .registerPath("salesmarketing.hmim.class");
   }
 }
 mixin(EntityCalls!("HMIMClassEntity"));
