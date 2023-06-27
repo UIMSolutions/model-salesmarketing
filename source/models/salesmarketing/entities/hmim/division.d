@@ -1,9 +1,9 @@
 module models.salesmarketing.entities.hmim.division;
 
-@safe:
 import models.salesmarketing;
 
-class DHMIMDivisionEntity : DEntity {
+@safe:
+class  DHMIMDivisionEntity : DEntity {
   mixin(EntityThis!("HMIMDivisionEntity"));
   
   override void initialize(DConfigurationValue configSettings = null) {

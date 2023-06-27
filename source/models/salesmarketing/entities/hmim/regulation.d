@@ -1,9 +1,9 @@
 module models.salesmarketing.entities.hmim.regulation;
 
-@safe:
 import models.salesmarketing;
 
-class DHMIMRegulationEntity : DEntity {
+@safe:
+class  DHMIMRegulationEntity : DEntity {
   mixin(EntityThis!("HMIMRegulationEntity"));
   
   override void initialize(DConfigurationValue configSettings = null) {

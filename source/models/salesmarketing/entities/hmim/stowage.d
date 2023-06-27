@@ -1,12 +1,10 @@
 module models.salesmarketing.entities.hmim.stowage;
 
-module models.salesmarketing.entities.agreementexternalagreementclassificationcod;
-
-@safe:
 import models.salesmarketing;
 
-class DLogisticsLocationRoleEntity : DEntity {
-  mixin(EntityThis!("LogisticsLocationRoleEntity"));
+@safe:
+class DHMIMStowageEntity : DEntity {
+  mixin(EntityThis!("HMIMStowageEntity"));
   
   override void initialize(DConfigurationValue configSettings = null) {
     super.initialize(configSettings);
@@ -23,11 +21,11 @@ class DLogisticsLocationRoleEntity : DEntity {
       .registerPath("salesmarketing_logistics.locationroles");
   }
 }
-mixin(EntityCalls!("LogisticsLocationRoleEntity"));
+mixin(EntityCalls!("HMIMStowageEntity"));
 
 version(test_modul_salesmarketing) { unittest {
-    assert(LogisticsLocationRoleEntity);
+    assert(HMIMStowageEntity);
   
-    auto entity = LogisticsLocationRoleEntity;
+    auto entity = HMIMStowageEntity;
   }
 }
