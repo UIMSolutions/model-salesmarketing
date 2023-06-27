@@ -1,32 +1,34 @@
 module models.salesmarketing.entities.hmim.regulation;
-module models.salesmarketing.entities.agreementexternalagreementclassificationcod;
 
 @safe:
 import models.salesmarketing;
 
-class DLogisticsLocationRoleEntity : DEntity {
-  mixin(EntityThis!("LogisticsLocationRoleEntity"));
+class DHMIMRegulationEntity : DEntity {
+  mixin(EntityThis!("HMIMRegulationEntity"));
   
   override void initialize(DConfigurationValue configSettings = null) {
     super.initialize(configSettings);
 
     this
       .addValues([ // individual values
-        "purpose": StringAttribute, //
-        "postalAddress": StringAttribute, //
-        "contactInfo": StringAttribute, //
-        "language": StringAttribute, //
-        "type": StringAttribute, //
-        "backingTable_LogisticsLocationRoleTranslationRelationshipId": StringAttribute, //
+        "regCode": StringAttribute, //		SalesAndMarketing/HMIMRegulationEntity
+        "description": StringAttribute, //		SalesAndMarketing/HMIMRegulationEntity
+        "printAfter": StringAttribute, //		SalesAndMarketing/HMIMRegulationEntity
+        "printBefore": StringAttribute, //		SalesAndMarketing/HMIMRegulationEntity
+        "sequenceNumber": StringAttribute, //		SalesAndMarketing/HMIMRegulationEntity
+        "printField": StringAttribute, //		SalesAndMarketing/HMIMRegulationEntity
+        "printWithPrevious": StringAttribute, //		SalesAndMarketing/HMIMRegulationEntity
+        "printCode": StringAttribute, //		SalesAndMarketing/HMIMRegulationEntity
+        "backingTable_HMIMRegulationRelationshipId": StringAttribute, //		SalesAndMarketing/HMIMRegulationEntity
       ])
-      .registerPath("salesmarketing_logistics.locationroles");
+      .registerPath("salesmarketing.hmim.regulation");
   }
 }
-mixin(EntityCalls!("LogisticsLocationRoleEntity"));
+mixin(EntityCalls!("HMIMRegulationEntity"));
 
 version(test_modul_salesmarketing) { unittest {
-    assert(LogisticsLocationRoleEntity);
+    assert(HMIMRegulationEntity);
   
-    auto entity = LogisticsLocationRoleEntity;
+    auto entity = HMIMRegulationEntity;
   }
 }

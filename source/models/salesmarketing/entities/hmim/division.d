@@ -3,29 +3,27 @@ module models.salesmarketing.entities.hmim.division;
 @safe:
 import models.salesmarketing;
 
-class DLogisticsLocationRoleEntity : DEntity {
-  mixin(EntityThis!("LogisticsLocationRoleEntity"));
+class DHMIMDivisionEntity : DEntity {
+  mixin(EntityThis!("HMIMDivisionEntity"));
   
   override void initialize(DConfigurationValue configSettings = null) {
     super.initialize(configSettings);
 
     this
       .addValues([ // individual values
-        "purpose": StringAttribute, //
-        "postalAddress": StringAttribute, //
-        "contactInfo": StringAttribute, //
-        "language": StringAttribute, //
-        "type": StringAttribute, //
-        "backingTable_LogisticsLocationRoleTranslationRelationshipId": StringAttribute, //
+        "divisionCode": StringAttribute, //		SalesAndMarketing/HMIMDivisionEntity
+        "description": StringAttribute, //		SalesAndMarketing/HMIMDivisionEntity
+        "classCode": StringAttribute, //		SalesAndMarketing/HMIMDivisionEntity
+        "backingTable_HMIMDivisionRelationshipId": StringAttribute, //		SalesAndMarketing/HMIMDivisionEntity
       ])
-      .registerPath("salesmarketing_logistics.locationroles");
+      .registerPath("salesmarketing.hmim.division");
   }
 }
-mixin(EntityCalls!("LogisticsLocationRoleEntity"));
+mixin(EntityCalls!("HMIMDivisionEntity"));
 
 version(test_modul_salesmarketing) { unittest {
-    assert(LogisticsLocationRoleEntity);
+    assert(HMIMDivisionEntity);
   
-    auto entity = LogisticsLocationRoleEntity;
+    auto entity = HMIMDivisionEntity;
   }
 }

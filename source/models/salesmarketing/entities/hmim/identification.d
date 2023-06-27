@@ -11,13 +11,13 @@ class DHMIMIdentificationEntity : DEntity {
 
     this
       .addValues([ // individual values
-        "IdentificationCode": StringAttribute, 
-        "Description": StringAttribute, 
-        "RestrictAir": StringAttribute, 
-        "RestrictSea": StringAttribute, 
-        "BackingTable_HMIMIdentificationRelationshipId": UUIDAttribute,       
+        "identificationCode": StringAttribute, 
+        "description": StringAttribute, 
+        "restrictAir": StringAttribute, 
+        "restrictSea": StringAttribute, 
+        "backingTable_HMIMIdentificationRelationshipId": UUIDAttribute,       
       ])
-      .registerPath("salesmarketing_logistics.locationroles");
+      .registerPath("salesmarketing.hmim.identification");
   }
 }
 mixin(EntityCalls!("HMIMIdentificationEntity"));
