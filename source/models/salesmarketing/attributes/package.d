@@ -1,8 +1,10 @@
 module models.myName.attributes;
 
-public import models.myName.attributes.codes;
-public import models.myName.attributes.elements;
-public import models.myName.attributes.entites;
-public import models.myName.attributes.functions;
-public import models.myName.attributes.relationships;
-public import models.myName.attributes.uuids;
+public {
+  import models.myName.attributes.codes;
+  import models.myName.attributes.elements;
+  import models.myName.attributes.entites;
+  import models.myName.attributes.functions;
+  import models.myName.attributes.relationships;
+  import models.myName.attributes.uuids;
+}

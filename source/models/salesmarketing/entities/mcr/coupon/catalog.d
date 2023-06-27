@@ -1,5 +1,5 @@
 
-module models.salesmarketing.entities.mcr.couponcatalog;
+module source.models.salesmarketing.entities.mcr.coupon.catalog;
 
 @safe:
 import models.salesmarketing;
