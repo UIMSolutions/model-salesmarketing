@@ -3,7 +3,7 @@ module models.salesmarketing.entities.hmim.identification;
 @safe:
 import models.salesmarketing;
 
-class DHMIMIdentificationEntity : DOOPEntity {
+class DHMIMIdentificationEntity : DEntity {
   mixin(EntityThis!("HMIMIdentificationEntity"));
   
   override void initialize(DConfigurationValue configSettings = null) {
