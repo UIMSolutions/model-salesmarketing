@@ -3,7 +3,7 @@ module models.salesmarketing.entities.mcr.salesproductset;
 @safe:
 import models.salesmarketing;
 
-class DMCRSalesProductSetEntity : DOOPEntity {
+class DMCRSalesProductSetEntity : DEntity {
   mixin(EntityThis!("MCRSalesProductSetEntity"));
   
   override void initialize(DConfigurationValue configSettings = null) {
