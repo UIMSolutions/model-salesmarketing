@@ -3,7 +3,7 @@ module models.salesmarketing.entities.custchargecust;
 @safe:
 import models.salesmarketing;
 
-class DCustomerPriorityClassificationGroupEntity : DOOPEntity {
+class DCustomerPriorityClassificationGroupEntity : DEntity {
   mixin(EntityThis!("CustomerPriorityClassificationGroupEntity"));
   
   override void initialize(DConfigurationValue configSettings = null) {
