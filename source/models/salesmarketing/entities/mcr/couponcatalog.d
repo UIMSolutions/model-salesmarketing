@@ -4,7 +4,7 @@ module models.salesmarketing.entities.mcr.couponcatalog;
 @safe:
 import models.salesmarketing;
 
-class DMCRCouponCatalogEntity : DOOPEntity {
+class DMCRCouponCatalogEntity : DEntity {
   mixin(EntityThis!("MCRCouponCatalogEntity"));
   
   override void initialize(DConfigurationValue configSettings = null) {
