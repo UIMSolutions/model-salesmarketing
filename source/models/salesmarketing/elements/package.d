@@ -1,1 +1,1 @@
-module models.myName.elements;
+module models.salesmarketing.elements;

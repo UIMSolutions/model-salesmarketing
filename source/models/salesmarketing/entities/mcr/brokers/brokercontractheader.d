@@ -1,9 +1,13 @@
 module models.salesmarketing.entities.mcr.brokers.brokercontractheader;
 
-@safe:
 import models.salesmarketing;
 
+<<<<<<< HEAD
 class DLogisticsLocationRoleEntity : DEntity {
+=======
+@safe:
+class  DLogisticsLocationRoleEntity : DEntity {
+>>>>>>> 8b27b7190cf4fd33dee4f46a1a44092c61660deb
   mixin(EntityThis!("LogisticsLocationRoleEntity"));
   
   override void initialize(DConfigurationValue configSettings = null) {

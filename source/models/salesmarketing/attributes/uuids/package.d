@@ -1,3 +1,3 @@
-module models.myName.attributes.uuids;
+module models.salesmarketing.attributes.uuids;
 
-public import models.myName.attributes.uuids.entities;
+public import models.salesmarketing.attributes.uuids.entities;

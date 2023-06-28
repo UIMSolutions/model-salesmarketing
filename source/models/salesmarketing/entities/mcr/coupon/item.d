@@ -1,9 +1,14 @@
-module models.salesmarketing.entities.agreementexternalagreementclassificationcod;
 
-@safe:
+module source.models.salesmarketing.entities.mcr.coupon.item;
+
 import models.salesmarketing;
 
+<<<<<<< HEAD:source/models/salesmarketing/entities/mcr/coupondiscount.d
 class DLogisticsLocationRoleEntity : DEntity {
+=======
+@safe:
+class  DLogisticsLocationRoleEntity : DEntity {
+>>>>>>> 8b27b7190cf4fd33dee4f46a1a44092c61660deb:source/models/salesmarketing/entities/mcr/coupon/item.d
   mixin(EntityThis!("LogisticsLocationRoleEntity"));
   
   override void initialize(DConfigurationValue configSettings = null) {

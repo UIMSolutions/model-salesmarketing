@@ -1,31 +1,37 @@
-module models.salesmarketing.entities.agreementexternalagreementclassificationcod;
+module models.salesmarketing.entities.deliveryreason;
 
-@safe:
 import models.salesmarketing;
 
+<<<<<<< HEAD
 class DLogisticsLocationRoleEntity : DEntity {
   mixin(EntityThis!("LogisticsLocationRoleEntity"));
+=======
+@safe:
+class  DDeliveryReasonEntity : DEntity {
+  mixin(EntityThis!("DeliveryReasonEntity"));
+>>>>>>> 8b27b7190cf4fd33dee4f46a1a44092c61660deb
   
   override void initialize(DConfigurationValue configSettings = null) {
     super.initialize(configSettings);
 
     this
       .addValues([ // individual values
-        "purpose": StringAttribute, // 
-        "postalAddress": StringAttribute, // 
-        "contactInfo": StringAttribute, // 
-        "language": StringAttribute, // 
-        "type": StringAttribute, // 
-        "backingTable_LogisticsLocationRoleTranslationRelationshipId": StringAttribute, // 
+        "reasonCode": StringAttribute, ///		SalesAndMarketing/DeliveryReasonEntity
+        "reasonDescription": StringAttribute, ///		SalesAndMarketing/DeliveryReasonEntity
+        "free_IT": StringAttribute, ///		SalesAndMarketing/DeliveryReasonEntity
+        "invoiceAccount_IT": StringAttribute, ///		SalesAndMarketing/DeliveryReasonEntity
+        "paymTermId_IT": StringAttribute, ///		SalesAndMarketing/DeliveryReasonEntity
+        "backingTable_DlvReasonRelationshipId": StringAttribute, ///		SalesAndMarketing/DeliveryReasonEntity
+        "relationship_PrimaryCompanyContextRelationshipId": StringAttribute, ///		SalesAndMarketing/DeliveryReasonEntity
       ])
-      .registerPath("salesmarketing_logistics.locationroles");
+      .registerPath("salesmarketing.deliveryreason");
   }
 }
-mixin(EntityCalls!("LogisticsLocationRoleEntity"));
+mixin(EntityCalls!("DeliveryReasonEntity"));
 
 version(test_modul_salesmarketing) { unittest {
-    assert(LogisticsLocationRoleEntity);
+    assert(DeliveryReasonEntity);
   
-    auto entity = LogisticsLocationRoleEntity;
+    auto entity = DeliveryReasonEntity;
   }
 }

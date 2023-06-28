@@ -1,9 +1,13 @@
 module models.salesmarketing.entities.mcr.salesproductset;
 
-@safe:
 import models.salesmarketing;
 
+<<<<<<< HEAD
 class DMCRSalesProductSetEntity : DEntity {
+=======
+@safe:
+class  DMCRSalesProductSetEntity : DEntity {
+>>>>>>> 8b27b7190cf4fd33dee4f46a1a44092c61660deb
   mixin(EntityThis!("MCRSalesProductSetEntity"));
   
   override void initialize(DConfigurationValue configSettings = null) {

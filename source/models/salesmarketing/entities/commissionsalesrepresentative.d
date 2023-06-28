@@ -1,31 +1,34 @@
 module models.salesmarketing.entities.commissionsalesrepresentative;
 
-@safe:
 import models.salesmarketing;
 
+<<<<<<< HEAD
 class DLogisticsLocationRoleEntity : DEntity {
   mixin(EntityThis!("LogisticsLocationRoleEntity"));
+=======
+@safe:
+class  DCommissionSalesRepresentativeGroupEntity : DEntity {
+  mixin(EntityThis!("CommissionSalesRepresentativeGroupEntity"));
+>>>>>>> 8b27b7190cf4fd33dee4f46a1a44092c61660deb
   
   override void initialize(DConfigurationValue configSettings = null) {
     super.initialize(configSettings);
 
     this
       .addValues([ // individual values
-        "purpose": StringAttribute, //
-        "postalAddress": StringAttribute, //
-        "contactInfo": StringAttribute, //
-        "language": StringAttribute, //
-        "type": StringAttribute, //
-        "backingTable_LogisticsLocationRoleTranslationRelationshipId": StringAttribute, //
+        "groupId": StringAttribute, //		SalesAndMarketing/CommissionSalesRepresentativeGroupEntity
+        "groupName": StringAttribute, //		SalesAndMarketing/CommissionSalesRepresentativeGroupEntity
+        "backingTable_CommissionSalesGroupRelationshipId": StringAttribute, //		SalesAndMarketing/CommissionSalesRepresentativeGroupEntity
+        "relationship_PrimaryCompanyContextRelationshipId": StringAttribute, //		SalesAndMarketing/CommissionSalesRepresentativeGroupEntity      
       ])
-      .registerPath("salesmarketing_logistics.locationroles");
+      .registerPath("salesmarketing.commissionsalesrepresentative");
   }
 }
-mixin(EntityCalls!("LogisticsLocationRoleEntity"));
+mixin(EntityCalls!("CommissionSalesRepresentativeGroupEntity"));
 
 version(test_modul_salesmarketing) { unittest {
-    assert(LogisticsLocationRoleEntity);
+    assert(CommissionSalesRepresentativeGroupEntity);
   
-    auto entity = LogisticsLocationRoleEntity;
+    auto entity = CommissionSalesRepresentativeGroupEntity;
   }
 }

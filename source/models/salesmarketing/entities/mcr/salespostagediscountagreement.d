@@ -1,10 +1,14 @@
 
 module models.salesmarketing.entities.mcr.salespostagediscountagreement;
 
-@safe:
 import models.salesmarketing;
 
+<<<<<<< HEAD
 class DMCRSalesPostageDiscountAgreementEntity : DEntity {
+=======
+@safe:
+class  DMCRSalesPostageDiscountAgreementEntity : DEntity {
+>>>>>>> 8b27b7190cf4fd33dee4f46a1a44092c61660deb
   mixin(EntityThis!("MCRSalesPostageDiscountAgreementEntity"));
   
   override void initialize(DConfigurationValue configSettings = null) {

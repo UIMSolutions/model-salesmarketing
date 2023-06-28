@@ -1,11 +1,15 @@
+module models.salesmarketing.entities.pricediscs.multilinediscountcustomergroup;
 
-module models.salesmarketing.entities.agreementexternalagreementclassificationcod;
-
-@safe:
 import models.salesmarketing;
 
+<<<<<<< HEAD:source/models/salesmarketing/entities/pricedisclines/multilinediscountcustomergroup.d
 class DLogisticsLocationRoleEntity : DEntity {
   mixin(EntityThis!("LogisticsLocationRoleEntity"));
+=======
+@safe:
+class  DPriceDiscMultilineDiscountCustomerGroupEntity : DEntity {
+  mixin(EntityThis!("PriceDiscMultilineDiscountCustomerGroupEntity"));
+>>>>>>> 8b27b7190cf4fd33dee4f46a1a44092c61660deb:source/models/salesmarketing/entities/pricediscs/multilinediscountcustomergroup.d
   
   override void initialize(DConfigurationValue configSettings = null) {
     super.initialize(configSettings);
@@ -22,7 +26,7 @@ class DLogisticsLocationRoleEntity : DEntity {
       .registerPath("salesmarketing_logistics.locationroles");
   }
 }
-mixin(EntityCalls!("LogisticsLocationRoleEntity"));
+mixin(EntityCalls!("PriceDiscMultilineDiscountCustomerGroupEntity"));
 
 version(test_modul_salesmarketing) { unittest {
     assert(LogisticsLocationRoleEntity);

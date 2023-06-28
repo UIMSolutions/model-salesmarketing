@@ -1,33 +1,33 @@
 module models.salesmarketing.entities.hmim.stowage;
 
-module models.salesmarketing.entities.agreementexternalagreementclassificationcod;
-
-@safe:
 import models.salesmarketing;
 
+<<<<<<< HEAD
 class DLogisticsLocationRoleEntity : DEntity {
   mixin(EntityThis!("LogisticsLocationRoleEntity"));
+=======
+@safe:
+class DHMIMStowageEntity : DEntity {
+  mixin(EntityThis!("HMIMStowageEntity"));
+>>>>>>> 8b27b7190cf4fd33dee4f46a1a44092c61660deb
   
   override void initialize(DConfigurationValue configSettings = null) {
     super.initialize(configSettings);
 
     this
       .addValues([ // individual values
-        "purpose": StringAttribute, //
-        "postalAddress": StringAttribute, //
-        "contactInfo": StringAttribute, //
-        "language": StringAttribute, //
-        "type": StringAttribute, //
-        "backingTable_LogisticsLocationRoleTranslationRelationshipId": StringAttribute, //
+        "stowageCode": StringAttribute, //		SalesAndMarketing/HMIMStowageEntity
+        "description": StringAttribute, //		SalesAndMarketing/HMIMStowageEntity
+        "backingTable_HMIMStowageRelationshipId": StringAttribute, //		SalesAndMarketing/HMIMStowageEntity
       ])
-      .registerPath("salesmarketing_logistics.locationroles");
+      .registerPath("salesmarketing.hmim.stowage");
   }
 }
-mixin(EntityCalls!("LogisticsLocationRoleEntity"));
+mixin(EntityCalls!("HMIMStowageEntity"));
 
 version(test_modul_salesmarketing) { unittest {
-    assert(LogisticsLocationRoleEntity);
+    assert(HMIMStowageEntity);
   
-    auto entity = LogisticsLocationRoleEntity;
+    auto entity = HMIMStowageEntity;
   }
 }

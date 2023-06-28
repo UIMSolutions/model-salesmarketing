@@ -1,1 +1,1 @@
-module models.myName.attributes.entities;
+module models.salesmarketing.attributes.entities;

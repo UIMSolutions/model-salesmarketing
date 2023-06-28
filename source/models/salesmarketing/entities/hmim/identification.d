@@ -1,9 +1,13 @@
 module models.salesmarketing.entities.hmim.identification;
 
-@safe:
 import models.salesmarketing;
 
+<<<<<<< HEAD
 class DHMIMIdentificationEntity : DEntity {
+=======
+@safe:
+class  DHMIMIdentificationEntity : DEntity {
+>>>>>>> 8b27b7190cf4fd33dee4f46a1a44092c61660deb
   mixin(EntityThis!("HMIMIdentificationEntity"));
   
   override void initialize(DConfigurationValue configSettings = null) {
@@ -11,13 +15,13 @@ class DHMIMIdentificationEntity : DEntity {
 
     this
       .addValues([ // individual values
-        "IdentificationCode": StringAttribute, 
-        "Description": StringAttribute, 
-        "RestrictAir": StringAttribute, 
-        "RestrictSea": StringAttribute, 
-        "BackingTable_HMIMIdentificationRelationshipId": UUIDAttribute,       
+        "identificationCode": StringAttribute, 
+        "description": StringAttribute, 
+        "restrictAir": StringAttribute, 
+        "restrictSea": StringAttribute, 
+        "backingTable_HMIMIdentificationRelationshipId": UUIDAttribute,       
       ])
-      .registerPath("salesmarketing_logistics.locationroles");
+      .registerPath("salesmarketing.hmim.identification");
   }
 }
 mixin(EntityCalls!("HMIMIdentificationEntity"));

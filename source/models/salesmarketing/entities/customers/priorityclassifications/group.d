@@ -1,9 +1,13 @@
 module models.salesmarketing.entities.customers.priorityclassifications.group;
 
-@safe:
 import models.salesmarketing;
 
+<<<<<<< HEAD
 class DCustomerPriorityClassificationGroupEntity : DEntity {
+=======
+@safe:
+class  DCustomerPriorityClassificationGroupEntity : DEntity {
+>>>>>>> 8b27b7190cf4fd33dee4f46a1a44092c61660deb
   mixin(EntityThis!("CustomerPriorityClassificationGroupEntity"));
   
   override void initialize(DConfigurationValue configSettings = null) {

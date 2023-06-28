@@ -1,31 +1,33 @@
 module models.salesmarketing.entities.hmim.ems;
 
-@safe:
 import models.salesmarketing;
 
+<<<<<<< HEAD
 class DLogisticsLocationRoleEntity : DEntity {
   mixin(EntityThis!("LogisticsLocationRoleEntity"));
+=======
+@safe:
+class  DHMIMEMSEntity : DEntity {
+  mixin(EntityThis!("HMIMEMSEntity"));
+>>>>>>> 8b27b7190cf4fd33dee4f46a1a44092c61660deb
   
   override void initialize(DConfigurationValue configSettings = null) {
     super.initialize(configSettings);
 
     this
       .addValues([ // individual values
-        "purpose": StringAttribute, //
-        "postalAddress": StringAttribute, //
-        "contactInfo": StringAttribute, //
-        "language": StringAttribute, //
-        "type": StringAttribute, //
-        "backingTable_LogisticsLocationRoleTranslationRelationshipId": StringAttribute, //
+        "emsSCode": StringAttribute, // SalesAndMarketing/HMIMEMSEntity
+        "description": StringAttribute, // SalesAndMarketing/HMIMEMSEntity
+        "backingTable_HMIMEMSRelationshipId": StringAttribute, // SalesAndMarketing/HMIMEMSEntity
       ])
-      .registerPath("salesmarketing_logistics.locationroles");
+      .registerPath("salesmarketing.hmim.ems");
   }
 }
-mixin(EntityCalls!("LogisticsLocationRoleEntity"));
+mixin(EntityCalls!("HMIMEMSEntity"));
 
 version(test_modul_salesmarketing) { unittest {
-    assert(LogisticsLocationRoleEntity);
+    assert(HMIMEMSEntity);
   
-    auto entity = LogisticsLocationRoleEntity;
+    auto entity = HMIMEMSEntity;
   }
 }

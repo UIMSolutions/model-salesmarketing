@@ -1,9 +1,13 @@
 module models.salesmarketing.entities.hmim.class_;
 
-@safe:
 import models.salesmarketing;
 
+<<<<<<< HEAD
 class DHMIMClassEntity : DEntity {
+=======
+@safe:
+class  DHMIMClassEntity : DEntity {
+>>>>>>> 8b27b7190cf4fd33dee4f46a1a44092c61660deb
   mixin(EntityThis!("HMIMClassEntity"));
   
   override void initialize(DConfigurationValue configSettings = null) {
@@ -14,7 +18,7 @@ class DHMIMClassEntity : DEntity {
         "classCode": StringAttribute,
         "backingTable_HMIMClassRelationshipId": UUIDAttribute,      
       ])
-      .registerPath("salesmarketing_hmim.classes");
+      .registerPath("salesmarketing.hmim.class");
   }
 }
 mixin(EntityCalls!("HMIMClassEntity"));

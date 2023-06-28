@@ -1,1 +1,1 @@
-module models.myName.attributes.functions;
+module models.salesmarketing.attributes.functions;
